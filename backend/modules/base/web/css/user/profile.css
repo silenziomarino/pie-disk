@@ -1,0 +1,32 @@
+
+
+#avatar{
+    margin: 4% 16%;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 1px 2px 4px #d2d6de;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.foto_icon {
+    position: absolute;
+    padding: 65px;
+    font-size: 70px;
+    margin-left: 62px;
+    margin-top: -210px;
+    color: #ecf0f5d9;
+    cursor: pointer;
+    opacity: 0;
+    transition: 350ms;
+}
+.foto_icon:hover{
+    opacity: 1;
+}
+
+@media (max-width: 755px) {
+    #avatar {
+        margin: 4% auto;
+    }
+}

@@ -1,0 +1,18 @@
+namespace: backend\tests
+actor_suffix: Tester
+paths:
+    tests: backend/tests
+    output: backend/tests/_output
+    data: backend/tests/_data
+    support: backend/tests/_support
+bootstrap: _bootstrap.php
+settings:
+    colors: true
+    memory_limit: 1024M
+
+modules:
+    config:
+        coverage:
+            enabled: true
+        Yii2:
+            configFile: 'backend/config/codeception-local.php'

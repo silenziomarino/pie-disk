@@ -1,0 +1,10 @@
+.signup-box{
+    width: 550px;
+    margin: 7% auto;
+}
+@media (max-width: 666px) {
+    .signup-box {
+        width: 95%;
+        margin: 7% auto;
+    }
+}

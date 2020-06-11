@@ -1,0 +1,88 @@
+
+
+.file-row{
+    cursor: pointer;
+}
+
+#file_bar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    height: 65px;
+    background: #222d32;
+    color: #fff;
+    margin-left: 50px !important;
+    z-index: 840;
+}
+@media (max-width: 770px) {
+    #file_bar{
+        margin-left: 0 !important;
+    }
+}
+
+.file_info{
+  font-size: 25px;
+}
+.file_name{
+    font-size: 16px;
+    padding-left: 20px;
+}
+.file_btn{
+    all: initial;
+    font-size: 16px;
+    color: #e6e6e6;
+    border: none;
+    outline: none;
+    background: none;
+    margin: 7px;
+    cursor: pointer;
+}
+#file_bar a:hover,#file_bar a:active,#file_bar a:focus {
+    outline: none;
+    text-decoration: none;
+    color: #fff;
+}
+.file_bar_btn{
+    background: #59686f;
+    border-radius: 5px;
+    padding: 5px 25px;
+    margin: 1px;
+}
+ .file_bar_btn:hover, .file_bar_btn:active, .file_bar_btn:focus {
+     background: #969696;
+ }
+#close_file_bar{
+    padding-left: 23px;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.rambler-share{
+    display: none;
+    position: fixed;
+    bottom: 55px;
+    left: 313px;
+    margin-left: 50px !important;
+    z-index: 840;
+    background: #fff;
+    padding: 1px 16px;
+    border-radius: 5px;
+    box-shadow: 4px 1px 3px #222d325c;
+}
+
+
+@media (max-width: 814px) {
+    .file_bar_btn_text{
+        display: none;
+    }
+}
+@media (max-width: 550px) {
+    .file_name{
+        display: none;
+    }
+    #close_file_bar{
+        display: none;
+    }
+}

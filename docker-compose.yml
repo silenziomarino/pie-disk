@@ -1,0 +1,63 @@
+version: '3.2'
+
+services:
+
+  backend:
+    build:
+      context: docker
+#      args:
+#        - USER_ID=1000
+#        - GROUP_ID=1000
+    ports:
+      - 81:80
+    volumes:
+      # Re-use local composer cache via host-volume
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      # Mount source-code for development
+      - ./:/app
+    environment:
+      XDEBUG_CONFIG: "remote_host=192.168.220.1 remote_enable=1"
+      PHP_IDE_CONFIG: "serverName=Docker"
+    links:
+      - db
+    depends_on:
+      - db
+    networks:
+      - internal
+
+  #  db:
+  #    image: mysql:5.7
+  #    environment:
+  #      - MYSQL_ROOT_PASSWORD=${ROOT_PSW}
+  #      - MYSQL_DATABASE=${SQL_DB}
+  #      - MYSQL_USER=${SQL_USER}
+  #      - MYSQL_PASSWORD=${SQL_PSW}
+  #    networks:
+  #      - internal
+
+  db:
+    image: postgres:9.5
+    environment:
+      - POSTGRES_DB=${SQL_DB}
+      - POSTGRES_USER=${SQL_USER}
+      - POSTGRES_PASSWORD=${SQL_PSW}
+    volumes:
+      - ./database:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.220.0/28

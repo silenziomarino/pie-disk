@@ -1,0 +1,15 @@
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !^/(backend/web)
+RewriteRule ^assets/(.*)$  /backend/web/assets/$1 [L]
+RewriteRule ^css/(.*)$     /backend/web/css/$1 [L]
+RewriteRule ^js/(.*)$      /backend/web/js/$1 [L]
+RewriteRule ^img/(.*)$     /backend/web/img/$1 [L]
+RewriteRule ^content/(.*)$ /backend/web/content/$1 [L]
+RewriteRule (.*) /backend/web/$1
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /backend/web/index.php

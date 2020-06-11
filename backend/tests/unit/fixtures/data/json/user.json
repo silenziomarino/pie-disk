@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "email": "admin",
+    "auth_key": "OsPQgcmhlo5wAlsvDPSrow-Dh5H6L2qk",
+    "password": "$2y$13$F/6PI29KjnOxBA6L798zwubM.d7zoXM4ryjyGTFo7h.c6f85KMHcq",
+    "created_at": 1581250127,
+    "updated_at": 1581250127,
+    "lock": null,
+    "inviter_id": null
+  },
+  {
+    "id": 2,
+    "email": "surkan@gmail.com",
+    "auth_key": "BOQcoRkZSonxIvcDO1sxuqWQVydr5H4U",
+    "password": "$2y$13$nAV1oONRNs02pIAulZeWqOpiWTxROrkMV98GYEcBGYPwWrwnzjp56",
+    "created_at": 1587464333,
+    "updated_at": 1587465964,
+    "lock": null,
+    "inviter_id": null
+  }
+]
